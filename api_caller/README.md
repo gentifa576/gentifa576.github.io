@@ -37,7 +37,7 @@ generateUrl()
 1. Generifying call method so it doesn’t have to be specify by each supplier, since I believe it has generic flow (create header -> create request -> log request (optional) -> send request -> log response(optional) -> parse response)
 2. Overload method which can simplify usage
 3. savedCallerEvent() saving specific event of the call, can be left with no op
-4. Has Build-in Callback (optional to use) that handles Server Errors, Client Errors, and Success Calls
+4. Build-in Callback (optional to use) that handles Server Errors, Client Errors, and Success Calls
 5. Centralized Util for XML & JSON
 6. Response parser (currently based of json, json to json and xml to json)
 7. Has a build-in logging method in a form of text
