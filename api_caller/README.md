@@ -19,7 +19,7 @@ APICallerBase -> SpecificAPICallerBase -> SpecificAPIMethodCaller
 Ex:
 APICallerBase -> WebCallerBase -> WebDailyWeatherCaller
 ```
-# SpecificAPICallerBase (Abstract Class)
+### SpecificAPICallerBase (Abstract Class)
 ```
 This class is intended to specify how the API behaves when doing API calls, and how you want to construct your request. You can also add other abstract method for use in the Specific Method Caller.
 
@@ -27,7 +27,7 @@ Method that are most likely to be overridden here:
 call() call flow for this specific API
 generateFetchRequest() can be overridden to append header
 ```
-# SpecificAPIMethodCaller
+### SpecificAPIMethodCaller
 ```
 This class is intended to handle how the specific calls and how to handle request creation and response parsing
 
