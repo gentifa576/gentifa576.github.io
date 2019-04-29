@@ -1,11 +1,11 @@
-#SupplierCallerBase
+# SupplierCallerBase
 
-##What it does
+## What it does
 ```
 Providing a building block for doing API Request and Response integration with generic flow that is able to simply creation of API Caller
 ```
 
-##Feature
+## Feature
 ```
 Has a build-in logging method in a form of ObjectNode
 Response parser (currently based of json, json to json and xml to json)
@@ -14,7 +14,7 @@ Has Build-in Callback (optional to use) that handles Server Errors, Client Error
 Centralized Util for XML, JSON, JsonNode
 ```
 
-##How to Use
+## How to Use
 ```
 Intended structure for this is with this approach
 SupplierCallerBase -> SpecificSupplierCallerBase -> SpecificSupplierMethodCaller
@@ -41,7 +41,7 @@ For GET HTTP method do construct it as ObjectNode and return it with objectNode.
 getResponseObject() if the response will be in JSON or XML format, do expect it to be returned as json(you can transform this to JsonNode with objectMapper.readTree(body)) and construct the result object from there
 getErrorResponseObject() can be left NO OP, is used to construct result object in case of failure, to ease error identification
 ```
-##TODO
+## TODO
 ```
 Generifying call method so it doesn’t have to be specify by each supplier, since I believe it has generic flow (create header -> create request -> log request (optional) -> send request -> log response(optional) -> parse response)
 Overload method which can simplify usage
