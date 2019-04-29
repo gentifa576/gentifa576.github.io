@@ -1,10 +1,8 @@
 # APICallerManager
-
 ## What it does
 ```
 Providing a building block for API Request and Response integration with API Manager that is able to simplify creation of API Caller
 ```
-
 ## Feature
 ```
 1. Has a build-in logging method in a form of text
@@ -13,7 +11,6 @@ Providing a building block for API Request and Response integration with API Man
 4. Has Build-in Callback (optional to use) that handles Server Errors, Client Errors, and Success Calls
 5. Centralized Util for XML & JSON
 ```
-
 ## How to Use
 ```
 Intended structure for this is with this approach
@@ -21,16 +18,17 @@ APICallerBase -> SpecificAPICallerBase -> SpecificAPIMethodCaller
 
 Ex:
 APICallerBase -> WebCallerBase -> WebDailyWeatherCaller
-
+```
 # SpecificAPICallerBase (Abstract Class)
+```
 This class is intended to specify how the API behaves when doing API calls, and how you want to construct your request. You can also add other abstract method for use in the Specific Method Caller.
 
 Method that are most likely to be overridden here:
 call() call flow for this specific API
 generateFetchRequest() can be overridden to append header
-
-
+```
 # SpecificAPIMethodCaller
+```
 This class is intended to handle how the specific calls and how to handle request creation and response parsing
 
 Method that are most likely to be overridden here:
